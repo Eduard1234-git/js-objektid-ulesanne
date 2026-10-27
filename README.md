@@ -14,7 +14,7 @@ Kõik tulemused kuvatakse HTML-lehel ja brauseri konsoolis.
 
 ## Olulised failid
 
-- `src/ulesanne.ts` — objektid, meetodid ja konsoolitulemused.
+- `src/ulesanne.js` — objektid, meetodid ja konsoolitulemused.
 - `src/pages/Home.tsx` — tulemuste kuvamine HTML-lehel.
 
 ## Käivitamine

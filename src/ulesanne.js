@@ -1,9 +1,3 @@
-export interface Raamat {
-  pealkiri: string;
-  autor: string;
-  aasta: number;
-}
-
 // 1. Raamatu objekt ja selle meetodid
 const raamat = {
   pealkiri: "Kevade",
@@ -14,7 +8,7 @@ const raamat = {
     return `${this.pealkiri} — ${this.autor} (${this.aasta})`;
   },
 
-  muudaAasta(uusAasta: number) {
+  muudaAasta(uusAasta) {
     this.aasta = uusAasta;
   },
 };
@@ -38,7 +32,7 @@ const raamatukogu = {
       aasta: 2007,
     },
     { pealkiri: "Hea härra Kivi", autor: "Andrus Kivirähk", aasta: 2018 },
-  ] as Raamat[],
+  ],
 
   kuvaRaamatud() {
     this.raamatud.forEach((raamat, indeks) => {
@@ -48,7 +42,7 @@ const raamatukogu = {
     });
   },
 
-  lisaRaamat(uusRaamat: Raamat) {
+  lisaRaamat(uusRaamat) {
     this.raamatud.push(uusRaamat);
   },
 
@@ -61,7 +55,7 @@ const raamatukogu = {
   },
 
   // Minu meetod leiab ja tagastab kõik valitud autori raamatud.
-  leiaAutoriRaamatud(autor: string) {
+  leiaAutoriRaamatud(autor) {
     return this.raamatud.filter((raamat) => raamat.autor === autor);
   },
 };
@@ -70,7 +64,7 @@ console.log("--- RAAMATUKOGU ---");
 console.log("Raamatud enne uue raamatu lisamist:");
 raamatukogu.kuvaRaamatud();
 
-const lisatudRaamat: Raamat = {
+const lisatudRaamat = {
   pealkiri: "Rehepapp",
   autor: "Andrus Kivirähk",
   aasta: 2000,
